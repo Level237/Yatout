@@ -2,7 +2,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // IMPORTANT : On surveille tous les fichiers dans app/ et src/
-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
   presets: [],
   theme: {
     extend: {
