@@ -99,8 +99,8 @@ export default function ServicesShowcase() {
                     {service.description}
                   </CardDescription>
                   
-                  <div className="flex items-center text-primary font-medium opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                    Découvrir <ArrowRight className="ml-2 w-4 h-4" />
+                  <div className="flex items-center text-primary font-medium  -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    <h2 className="text-black">Découvrir</h2><ArrowRight className="ml-2 w-4 h-4" />
                   </div>
                 </CardContent>
               </Card>
