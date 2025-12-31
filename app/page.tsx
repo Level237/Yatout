@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesShowcase from "@/components/ServicesShowcase";
 import HowItWorks from "@/components/HowItWorks";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
       <Hero />
       <ServicesShowcase />
       <HowItWorks />
-      <div className="container mx-auto px-4">
-        {/* Future sections */}
-      </div>
+      <Footer />
     </main>
   );
 }
