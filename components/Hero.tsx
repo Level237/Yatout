@@ -29,7 +29,7 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-to-br from-white to-gray-50">
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden  from-white to-gray-50">
       {/* Background Shapes */}
       <div className="absolute top-20 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-3xl -z-10" />
@@ -82,7 +82,7 @@ export default function Hero() {
             >
               <Button
                 size="lg"
-                className="bg-secondary text-white hover:bg-secondary/90 rounded-full h-14 px-8 text-lg shadow-lg shadow-secondary/20 transition-transform hover:scale-105"
+                className="bg-[#00CFE4] text-white hover:bg-secondary/90 rounded-full h-14 px-8 text-lg shadow-lg shadow-secondary/20 transition-transform hover:scale-105"
               >
                 Télécharger maintenant
               </Button>
@@ -136,60 +136,24 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative hidden lg:block h-[700px] w-full"
+            className="relative hidden lg:block h-auto w-full flex justify-center"
           >
-            {/* Main Phone */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[680px] bg-gray-900 rounded-[3rem] p-3 shadow-2xl border-4 border-gray-800 z-10">
-              <div className="relative w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                {/* Header */}
-                <div className="h-28 bg-primary p-6 pt-10 text-white flex flex-col justify-between">
-                   <div className="flex justify-between items-center">
-                     <div className="w-6 h-1 bg-white/50 rounded-full" />
-                     <div className="w-8 h-8 rounded-full bg-white/20" />
-                   </div>
-                   <div className="relative">
-                      <div className="absolute top-1/2 -translate-y-1/2 left-3 text-primary">
-                          <Search size={16} />
-                      </div>
-                      <div className="w-full h-10 bg-white rounded-full flex items-center px-10 text-sm text-gray-400">
-                      Rechercher...
-                      </div>
-                   </div>
-                </div>
-
-                {/* Categories Grid */}
-                <div className="p-6 grid grid-cols-2 gap-4">
-                  {['Hôtels', 'Villas', 'Restos', 'Ménage', 'Livraison', 'Loisirs'].map((item, i) => (
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 1 + (i * 0.1) }}
-                        key={item} 
-                        className="aspect-square bg-gray-50 rounded-2xl flex flex-col items-center justify-center gap-2 hover:bg-gray-100 transition-colors cursor-pointer group"
-                    >
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                           <div className="w-4 h-4 rounded-sm bg-current" />
-                        </div>
-                        <span className="text-sm font-medium text-gray-600">{item}</span>
-                    </motion.div>
-                  ))}
-                </div>
-
-                 {/* Bottom Nav */}
-                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-white border-t flex items-center justify-around px-6">
-                    <div className="w-6 h-6 bg-primary rounded-full" />
-                    <div className="w-6 h-6 bg-gray-200 rounded-full" />
-                    <div className="w-6 h-6 bg-gray-200 rounded-full" />
-                    <div className="w-6 h-6 bg-gray-200 rounded-full" />
-                 </div>
-              </div>
+            <div className="relative z-10 w-[390px] md:w-[550px]">
+                <Image 
+                    src="/mockup-home.png"
+                    alt="Yatout App Interface"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto drop-shadow-2xl"
+                    priority
+                />
             </div>
             
             {/* Floating Elements */}
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-20 right-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 max-w-[200px] z-20"
+              className="absolute top-20 right-0 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 max-w-[200px] z-20"
             >
               <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                 <CheckCircle size={20} />
@@ -203,7 +167,7 @@ export default function Hero() {
              <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-40 left-0 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 z-20"
+              className="absolute bottom-20 left-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 z-20"
             >
                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
                 <MapPin size={20} />
@@ -214,8 +178,8 @@ export default function Hero() {
               </div>
             </motion.div>
 
-             {/* Background decorative phone */}
-             <div className="absolute top-10 right-20 w-[300px] h-[600px] bg-gray-100 rounded-[3rem] -z-10 rotate-12 opacity-50" />
+             {/* Background decorative blob */}
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10" />
 
           </motion.div>
         </div>

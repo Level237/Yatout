@@ -108,7 +108,7 @@ export default function Header() {
             >
               Devenir Prestataire
             </Button>
-            <Button className="hidden md:inline-flex text-black bg-[#00CFE4] hover:bg-[#00CFE4]/90 rounded-md px-6 shadow-lg shadow-secondary/20">
+            <Button className="hidden md:inline-flex  bg-[#00CFE4] hover:bg-[#00CFE4]/90 rounded-md px-6 shadow-lg shadow-secondary/20">
               Télécharger l'App
             </Button>
             
